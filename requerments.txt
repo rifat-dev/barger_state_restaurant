@@ -1,0 +1,20 @@
+1. Project scope:
+   *Restaurant website
+
+2. Project Requerments      
+      * user can create an account
+      * user can make orders
+      * user can view profile , orderlist.
+      * user can make review
+      *user have dashbord section
+
+      *admin can add , update , delete product.
+      *admin can update order status
+      *admin can delete user
+      *admin can add admin user
+      
+
+
+3. DatavModel:-
+       #User:
+          name , email , password , image ,roal, createdAt
