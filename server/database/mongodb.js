@@ -1,5 +1,6 @@
 const { MongoClient } = require('mongodb')
 const User = require('./User.database')
+const Food = require('./Food.database')
 
 
 
@@ -10,11 +11,13 @@ const url = `mongodb+srv://${dbUser}:${dbPass}@cluster0.ltldm.mongodb.net/${dbNa
 
 let mongodb;
 let Users;
+let Foods;
 
 function connect(callback) {
     MongoClient.connect(url, { useUnifiedTopology: true, useNewUrlParser: true }, (err, client) => {
         mongodb = client.db(dbName);
-        Users = new User(mongodb)
+        Users = new User(mongodb);
+        Foods = new Food(mongodb)
         callback(err);
     });
 }
@@ -24,12 +27,17 @@ function get() {
 }
 
 function user() {
-    return Users
+    return Users;
+}
+
+function food() {
+    return Foods;
 }
 
 
 module.exports = {
     connect,
     get,
-    user
+    user,
+    food
 };

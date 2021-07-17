@@ -18,3 +18,6 @@
 3. DatavModel:-
        #User:
           name , email , password , image ,roal, createdAt
+       
+       #food
+          name, title , part , category , description , price , images 

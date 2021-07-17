@@ -19,7 +19,8 @@ app.use(bodyParser.json())
 // 
 const midleware = [
     morgan('dev'),
-    cors()
+    cors(),
+    cookeParser('SECRET')
 ]
 
 app.use(midleware)
@@ -30,10 +31,12 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 // import routers
-const user = require('./routers/user.router')
+const userRoute = require('./routers/user.router')
+const foodRoute = require('./routers/food.router')
 
 
 // use routers
-app.use('/api/user', user)
+app.use('/api/user', userRoute)
+app.use('/api/food', foodRoute)
 
 module.exports = app

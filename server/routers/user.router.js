@@ -9,11 +9,13 @@ const {
 
 const {
     userRegisterController,
-    userSignInController
+    userSignInController,
+    userSignOutController
 } = require('../controllers/user.controller')
 
 router.post('/register', upload.single('avatar'), signUpValidator, userRegisterController)
 router.post('/signIn', signInvalidator, userSignInController)
+router.get('/signout', userSignOutController)
 
 
 module.exports = router
