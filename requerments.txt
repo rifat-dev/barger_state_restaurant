@@ -6,7 +6,7 @@
       * user can make orders
       * user can view profile , orderlist.
       * user can make review
-      *user have dashbord section
+      * user have dashbord section
 
       *admin can add , update , delete product.
       *admin can update order status
@@ -15,9 +15,11 @@
       
 
 
-3. DatavModel:-
+3. DatabaseModel:-
        #User:
-          name , email , password , image ,roal, createdAt
-       
+          name , email , password , image ,roal, createdAt;
        #food
-          name, title , part , category , description , price , images 
+          name, title , 
+          part: Breakfast , Lunch, Dinner, Snacks , Others,
+          category: Burger , Wings , Chicken , Set-Menu , Sandwich, Others, 
+          description , price , images , userId;

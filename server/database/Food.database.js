@@ -4,7 +4,8 @@ class Food {
     }
 
     async create(food) {
-        console.log("food")
+        const result = await this.collection.insertOne(food)
+        return result.ops[0];
     }
 }
 

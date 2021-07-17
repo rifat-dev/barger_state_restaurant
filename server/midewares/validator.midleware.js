@@ -23,3 +23,18 @@ exports.signInvalidator = [
     body('password')
     .not().isEmpty().trim().withMessage('Password field is required')
 ]
+
+exports.foodValidator = [
+    body('name')
+    .not().isEmpty().trim().withMessage('Name field is required'),
+    body('title')
+    .not().isEmpty().trim().withMessage('Title field is required'),
+    body('part')
+    .not().isEmpty().trim().withMessage('Part field is required'),
+    body('category')
+    .not().isEmpty().trim().withMessage('Category  field is required'),
+    body('description')
+    .not().isEmpty().trim().withMessage('Description  field is required'),
+    body('price')
+    .not().isEmpty().trim().withMessage('Price  field is required'),
+]
