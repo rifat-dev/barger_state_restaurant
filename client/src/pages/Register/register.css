@@ -1,0 +1,113 @@
+.register {
+    background-color: var(--background-color);
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.register-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.register-col_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.register-col_left-image-2 {
+    display: none;
+}
+
+.register-col_left img {
+    width: 80%;
+    height: 80%;
+}
+
+.register-col_left:hover .register-col_left-image-1 {
+    display: none;
+}
+
+.register-col_left:hover .register-col_left-image-2 {
+    display: block;
+}
+
+.register-col_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.register-col_right::before {
+    content: '<form>';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--third-text-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+.register-col_right::after {
+    content: '<form>';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--third-text-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+.register-col_right-img {
+    width: 100px;
+    height: 100px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.register-col_right-form {
+    width: 70%;
+}
+
+.form-group input {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    color: var(--primary-text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 8px 0;
+}
+
+.form-control:focus {
+    background-color: #f3f3f3;
+    box-shadow: none;
+}
+
+.register-col_right-btn {
+    width: 100%;
+}
+
+.register-col_right-form p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.register-col_right-form-text {
+    color: var(--third-text-color);
+}
+
+.register-col_right-form p span:hover {
+    cursor: pointer;
+}

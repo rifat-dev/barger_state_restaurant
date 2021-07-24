@@ -49,6 +49,7 @@ exports.userRegisterController = async(req, res, next) => {
 exports.userSignInController = async(req, res, next) => {
     try {
 
+
         const User = db.user()
 
         const errors = validationResult(req).formatWith(errorFormater)
@@ -65,7 +66,7 @@ exports.userSignInController = async(req, res, next) => {
         if (!user) {
             return res.status(404).json({
                 success: false,
-                message: "user or password not match"
+                message: "email or password not match"
             })
         }
 
@@ -74,14 +75,9 @@ exports.userSignInController = async(req, res, next) => {
         if (!isMatch) {
             return res.status(404).json({
                 success: false,
-                message: "user or password not match"
+                message: "email or password not match"
             })
         }
-
-        // res.status(200).json({
-        //     success: true,
-        //     user
-        // })
 
         sendToken(user, 200, res)
 

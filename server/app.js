@@ -4,6 +4,7 @@ const cors = require('cors')
 const morgan = require('morgan')
 const cookeParser = require('cookie-parser')
 const dotenv = require('dotenv')
+const expressFileUploader = require('express-fileupload')
 const path = require('path')
 
 
@@ -11,8 +12,10 @@ const path = require('path')
 const app = express()
 
 //bodyParser parse application/json
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(bodyParser.json()) // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+
 
 
 
@@ -24,6 +27,7 @@ const midleware = [
 ]
 
 app.use(midleware)
+
 app.use(express.static("public"))
 if (process.env.NODE_ENV !== 'production') {
     dotenv.config({ path: 'server/config/.env' })

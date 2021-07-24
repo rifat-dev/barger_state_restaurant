@@ -1,0 +1,36 @@
+.navbar-item {
+    margin: 4px 15px;
+    color: var(--primary-text-color) !important;
+    font-family: var(--font-family);
+}
+
+.nav_text {
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav_text::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    left: 0;
+    bottom: 0;
+    transition: width 1s;
+}
+
+.nav_text:hover::before {
+    width: 100%;
+    right: 0;
+}
+
+.navbar-badge {
+    color: var(--primary-color);
+}
+
+.navbar-btn {
+    padding: 6px 25px;
+    margin: 0 4px;
+}
