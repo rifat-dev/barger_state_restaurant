@@ -2,9 +2,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css';
 
 import NavBar from './components/layouts/navbar/NavBar'
-import Home from 'pages/Home/Home';
-import LogIn from 'pages/LogIn/LogIn';
-import Register from 'pages/Register/Register';
+import Home from './pages/Home/Home';
+import LogIn from './pages/LogIn/LogIn';
+import Register from './pages/Register/Register';
 
 function App() {
   return (

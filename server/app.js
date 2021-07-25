@@ -15,10 +15,6 @@ const app = express()
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
-
-
-
-
 // 
 const midleware = [
     morgan('dev'),
@@ -28,7 +24,9 @@ const midleware = [
 
 app.use(midleware)
 
+// static file
 app.use(express.static("public"))
+
 if (process.env.NODE_ENV !== 'production') {
     dotenv.config({ path: 'server/config/.env' })
 }

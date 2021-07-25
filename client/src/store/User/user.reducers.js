@@ -4,6 +4,8 @@ import {
     USER_LOGIN_FAIL,
     USER_LOGIN_REQUEST,
     USER_LOGIN_SUCCESS,
+    USER_LOGOUT_FAIL,
+    USER_LOGOUT_SUCCESS,
     USER_REGISTER_FAIL,
     USER_REGISTER_REQUEST,
     USER_REGISTER_SUCCESS,
@@ -25,6 +27,12 @@ export const userReducer = (state = { user: {}, isAuthenticate: false, loading: 
                 isAuthenticate: true,
                 user: action.payload.user
             }
+        case USER_LOGOUT_SUCCESS:
+            return {
+                ...state,
+                isAuthenticate: false,
+                user: {}
+            }
         case SET_LOGIN_USER:
             return {
                 ...state,
@@ -36,6 +44,11 @@ export const userReducer = (state = { user: {}, isAuthenticate: false, loading: 
             return {
                 ...state,
                 loading: false,
+                error: action.payload.error
+            }
+        case USER_LOGOUT_FAIL:
+            return {
+                ...state,
                 error: action.payload.error
             }
         case CLEAR_ERROR:

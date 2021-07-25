@@ -5,6 +5,8 @@ import {
     USER_LOGIN_FAIL,
     USER_LOGIN_REQUEST,
     USER_LOGIN_SUCCESS,
+    USER_LOGOUT_FAIL,
+    USER_LOGOUT_SUCCESS,
     USER_REGISTER_FAIL,
     USER_REGISTER_REQUEST,
     USER_REGISTER_SUCCESS,
@@ -67,6 +69,26 @@ export const userRegister = (formData) => async(dispatch) => {
 
         dispatch({
             type: USER_REGISTER_FAIL,
+            payload: {
+                error: e.response.data.message
+            }
+        })
+    }
+}
+
+export const userLogOut = () => async(dispatch) => {
+    try {
+
+        await axios.get('/api/user/signout')
+
+        localStorage.removeItem("auth")
+
+        dispatch({ type: USER_LOGOUT_SUCCESS })
+
+    } catch (e) {
+
+        dispatch({
+            type: USER_LOGOUT_FAIL,
             payload: {
                 error: e.response.data.message
             }

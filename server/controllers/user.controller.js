@@ -23,7 +23,7 @@ exports.userRegisterController = async(req, res, next) => {
             name: req.body.name,
             email: req.body.email,
             password: hashPass,
-            image: req.file ? req.file.path : '',
+            image: req.file ? `/uploads/${req.file.filename}` : '',
             roal: "user",
             createdAt: new Date()
         }
@@ -34,10 +34,6 @@ exports.userRegisterController = async(req, res, next) => {
 
         const user = await User.create(userDoc)
 
-        // res.status(200).json({
-        //     success: true,
-        //     user
-        // })
 
         sendToken(user, 200, res)
 

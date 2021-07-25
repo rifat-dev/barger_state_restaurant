@@ -1,0 +1,22 @@
+.home-hader {
+    width: 100vw;
+    height: 80vh;
+    background-image: url('../../../assets/bannerbackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-hader_inner {
+    text-align: center;
+    font-family: var( --font-family);
+}
+
+.home-hader_inner span {
+    color: var(--third-text-color);
+    font-weight: 800;
+    text-transform: uppercase;
+}

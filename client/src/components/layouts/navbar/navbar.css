@@ -30,6 +30,10 @@
     color: var(--primary-color);
 }
 
+.navbar-avatar:hover {
+    cursor: pointer;
+}
+
 .navbar-btn {
     padding: 6px 25px;
     margin: 0 4px;

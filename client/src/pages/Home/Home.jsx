@@ -1,9 +1,11 @@
-import React from 'react';
+
+
+import Hader from '../../components/HomePage/Hader/Hader'
 
 const Home = () => {
     return (
         <div>
-            <h1>I am Home</h1>
+            <Hader />
         </div>
     );
 }
