@@ -1,0 +1,94 @@
+.shipping_input {
+    border: none;
+    background-color: #F5F5F5;
+}
+
+.check_cart {
+    width: 90%;
+    margin-left: 15%;
+    margin-right: 20px;
+    padding: 0 50px;
+    margin-bottom: 20px;
+}
+
+.text-left strong {
+    color: var(--secondary-color);
+}
+
+.checkOutCardContainer {
+    max-height: 250px;
+    overflow: auto;
+}
+
+.checkout-food-card {
+    padding: 4px;
+    background-color: var(--food-card-background);
+    border-radius: 10px;
+}
+
+.checkout-food-card .text-left {
+    margin-left: 8px;
+}
+
+.checkout-food-card img {
+    margin-right: 4px;
+}
+
+.checkout-food-card_price {
+    color: var(--secondary-color);
+}
+
+.total {
+    font-size: 20px;
+}
+
+.latestQuantity {
+    cursor: pointer;
+    color: var(--third-color);
+}
+
+.count_number {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.delete_btn {
+    text-align: end;
+    color: var(--secondary-color);
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.disable-btn {
+    border: none;
+    padding: 10px 25px;
+    background-color: var(--secondary-background-color);
+    color: var(--third-color);
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .check_cart {
+        width: 90%;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .check_cart {
+        width: 100%;
+        margin-left: auto;
+        margin-right: 20px;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .check_cart {
+        margin-top: 50px;
+    }
+}

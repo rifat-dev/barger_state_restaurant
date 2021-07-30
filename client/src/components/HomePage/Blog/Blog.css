@@ -1,0 +1,56 @@
+.blog {
+    text-align: start;
+    margin: 50px auto;
+}
+
+.p-text {
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.card_container {
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.custom_card {
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    margin: 15px;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.custom_card:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.6);
+}
+
+.card_Body {
+    margin-top: 20px;
+}
+
+.card_b_text {
+    padding: 0px 10px;
+    margin-top: 10px;
+}
+
+.card_p {
+    color: gray;
+}
+
+.right_arrow {
+    color: var( --secondary-color);
+    font-size: 18px;
+}
+
+.see_moreBtn {
+    font-weight: 500;
+    color: var( --primary-color);
+}
+
+.see_moreBtn:hover {
+    color: var( --secondary-color);
+    cursor: pointer;
+}

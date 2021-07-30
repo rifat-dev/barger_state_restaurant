@@ -35,6 +35,7 @@ exports.createNewFoodController = async(req, res, next) => {
 exports.getAllFoodsController = async(req, res, next) => {
     try {
 
+        // food collection 
         const Food = db.food();
 
         const foods = await Food.find();
@@ -44,6 +45,43 @@ exports.getAllFoodsController = async(req, res, next) => {
             foods: foods
         })
 
+
+    } catch (e) {
+        next(e)
+    }
+}
+
+exports.getSingleFood = async(req, res, next) => {
+    try {
+        const { foodId } = req.params
+            // food collection 
+        const Food = db.food();
+
+        const { food, relatedFoods } = await Food.findSingleFood(foodId)
+
+        res.status(200).json({
+            success: true,
+            food: food,
+            relatedFoods: relatedFoods
+        })
+
+    } catch (e) {
+        next(e)
+    }
+}
+
+exports.getOrderFood = async(req, res, next) => {
+    try {
+        const { foodId } = req.params
+            // food collection 
+        const Food = db.food();
+
+        const food = await Food.findOneById(foodId)
+
+        res.status(200).json({
+            success: true,
+            food: food
+        })
 
     } catch (e) {
         next(e)

@@ -1,0 +1,1 @@
+export default menu = ['Breakfast', 'Lunch', 'Dinner', 'Snacks']

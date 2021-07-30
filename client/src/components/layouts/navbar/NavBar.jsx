@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useAlert } from 'react-alert'
 import { OverlayTrigger, Popover, Button, Image } from 'react-bootstrap'
 
@@ -14,14 +14,18 @@ import { userLogOut } from '../../../store/User/user.actions'
 
 const NavBar = () => {
 
+    const history = useHistory()
     const alert = useAlert()
     const dispatch = useDispatch()
     const { user, isAuthenticate } = useSelector(state => state.auth)
+    const { cartItems } = useSelector(state => state.cart)
+
 
 
     const logOut = () => {
         dispatch(userLogOut())
         alert.success('User LogOut Success')
+        history.push('/')
     }
 
     return (
@@ -46,13 +50,22 @@ const NavBar = () => {
 
 
                         {isAuthenticate &&
-                            <Link to='/shop' className="navbar-item nav_text">
-                                Dashbord
-                            </Link>
+                            <>
+                                {user.roal === 'admin' &&
+                                    <Link to='/admin/dashbord' className="navbar-item nav_text">
+                                        Dashbord
+                                    </Link>
+                                }
+                                {user.roal === 'user' &&
+                                    <Link to='/user/dashbord' className="navbar-item nav_text">
+                                        Dashbord
+                                    </Link>
+                                }
+                            </>
                         }
 
                         <Link to="/cart" className="navbar-item navbar_cart">
-                            <Badge badgeContent={1} color="secondary">
+                            <Badge badgeContent={cartItems.length} color="secondary">
                                 <ShoppingCartRoundedIcon />
                             </Badge>
                         </Link>

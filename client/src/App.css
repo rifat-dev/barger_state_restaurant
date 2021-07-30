@@ -7,7 +7,11 @@
 :root {
     --primary-background-color: #fafafa;
     --secondary-background-color: #d1dae3;
+    --dashbord-primary-background: rgb(247, 247, 247);
+    --food-card-background: #F5F5F5;
     --primary-color: #ffab00;
+    --secondary-color: #f50057;
+    --third-color: #122936;
     --primary-text-color: #212121;
     --secondary-text-color: #fafafa;
     --third-text-color: #f50057;
@@ -19,6 +23,11 @@
 
 body {
     overflow-x: hidden;
+}
+
+img {
+    -webkit-filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+    filter: saturate(150%) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
 }
 
 .link {
@@ -93,7 +102,9 @@ body {
 }
 
 
-/* .btn:hover::before {
-    width: 100%;
-    color: var(--secondary-text-color);
-} */
+/* admin-dashbord */
+
+.admin-dashbord {
+    display: flex;
+    background-color: var( --dashbord-primary-background);
+}

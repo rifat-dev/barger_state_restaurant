@@ -8,6 +8,7 @@ const errorFormater = require('../utils/errorMsgFormater.utils')
 exports.userRegisterController = async(req, res, next) => {
     try {
 
+
         const User = db.user()
         const errors = validationResult(req).formatWith(errorFormater)
 
