@@ -102,7 +102,7 @@ const SideBar = () => {
                             </div>
                         </Link>
 
-                        <Link className="sidebar_menu-link">
+                        <Link to='/user/review' className="sidebar_menu-link">
                             <div className={path === "review" ? "active-item sidebar_menu-item" : "sidebar_menu-item"}>
                                 <li className="bi bi-plus-square-fill"></li>
                                 Review

@@ -2,3 +2,34 @@
     display: flex;
     background-color: var(--dashbord-primary-background);
 }
+
+.user-orders_body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-orders_body-table {
+    width: 80%;
+}
+
+.table-btn {
+    border: none;
+    padding: 6px 8px;
+    margin: 4px;
+    background-color: var( --secondary-color);
+    color: var( --secondary-text-color);
+}
+
+.received {
+    color: var(--primary-color);
+}
+
+.processing {
+    color: var(--secondary-color);
+}
+
+.done {
+    color: #01e37f;
+}

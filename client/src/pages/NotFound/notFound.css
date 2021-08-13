@@ -1,0 +1,25 @@
+.notFound {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFound-inner {
+    width: 400px;
+    height: 500px;
+    text-align: center;
+}
+
+.notFound-inner img {
+    width: 100%;
+}
+
+.notFound-inner button {
+    margin-top: 50px;
+}
+
+.notFound-inner button:hover {
+    cursor: no-drop;
+}

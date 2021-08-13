@@ -29,13 +29,13 @@ const CheckCart = ({ isData }) => {
 
     const saveInfo = () => {
         const priceInfo = {
-            totalItem: totalFoodLength,
-            subtotal: subtotal,
-            tax: tax,
-            delivery: delivery,
-            total: total
+            totalItem: Number(totalFoodLength),
+            subtotal: Number(subtotal),
+            tax: Number(tax),
+            delivery: Number(delivery),
+            total: Number(total)
         }
-        sessionStorage.setItem('priceInfo', JSON.stringify(priceInfo))
+        sessionStorage.setItem('cartInfo', JSON.stringify(priceInfo))
     }
 
 
@@ -82,7 +82,8 @@ const CheckCart = ({ isData }) => {
                         className='w-100 mt-3 check_your_food_active btn'
                         onClick={saveInfo}
                     >
-                        Processing To Pay</Link>
+                        {`Pay $${total}`}
+                    </Link>
                     :
                     <button type='button' disabled className=' disable-btn mt-3 w-100 check_your_food_disabled'>Processing To Pay</button>
             }

@@ -35,10 +35,14 @@ if (process.env.NODE_ENV !== 'production') {
 // import routers
 const userRoute = require('./routers/user.router')
 const foodRoute = require('./routers/food.router')
+const orderRoute = require('./routers/order.router')
+const reviewRouter = require('./routers/review.router')
 
 
 // use routers
 app.use('/api/user', userRoute)
 app.use('/api/food', foodRoute)
+app.use('/api/order', orderRoute)
+app.use('/api/review', reviewRouter)
 
 module.exports = app

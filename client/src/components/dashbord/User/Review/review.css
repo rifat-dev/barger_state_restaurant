@@ -1,0 +1,19 @@
+.user-review {
+    display: flex;
+    background-color: var(--dashbord-primary-background);
+}
+
+.user-review_body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-review_body-inner {
+    width: 60%;
+}
+
+.review-card h2 {
+    text-transform: uppercase;
+}

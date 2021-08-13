@@ -8,12 +8,15 @@ import Register from './pages/Register/Register';
 import SingleFood from './pages/SingleFood/SingleFood';
 
 
-import ProtectedRoute from './components/route/ProtectedRoute'
 import AdminDashbord from './components/dashbord/Admin/dashbord/AdminDashbord';
 import UserDashbord from './components/dashbord/User/dashbord/UserDashbord';
 import UserOrders from './components/dashbord/User/Orders/UserOrders';
+import Review from './components/dashbord/User/Review/Review'
 import Cart from './pages/Cart/Cart';
 import Payment from './pages/Payment/Payment';
+
+//Route
+import ProtectedRoute from './components/route/ProtectedRoute'
 
 
 function App() {
@@ -31,6 +34,7 @@ function App() {
           <ProtectedRoute path='/user/dashbord' component={UserDashbord} />
           <ProtectedRoute path='/user/orders' component={UserOrders} />
           <ProtectedRoute path='/user/payment' component={Payment} />
+          <ProtectedRoute path='/user/review' component={Review} />
 
           {/* admin routers */}
           <ProtectedRoute path='/admin/dashbord' component={AdminDashbord} isAdmin={true} />
