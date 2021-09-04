@@ -7,8 +7,6 @@ const errorFormater = require('../utils/errorMsgFormater.utils')
 
 exports.userRegisterController = async(req, res, next) => {
     try {
-
-
         const User = db.user()
         const errors = validationResult(req).formatWith(errorFormater)
 
@@ -91,6 +89,23 @@ exports.userSignOutController = async(req, res, next) => {
         res.status(200).json({
             success: true,
             message: "User Sign out success"
+        })
+
+    } catch (e) {
+        next(e)
+    }
+}
+
+exports.getAdminUsers = async(req, res, next) => {
+
+    try {
+        const User = db.user()
+
+        const users = await User.findAll()
+
+        res.status(200).json({
+            success: true,
+            users
         })
 
     } catch (e) {

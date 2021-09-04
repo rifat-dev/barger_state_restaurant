@@ -103,7 +103,7 @@ const NavBar = () => {
 
 
                         {!isAuthenticate &&
-                            <Link to='/login' className="btn navbar-btn">
+                            <Link to='/login' className="btn-grad">
                                 LogIn
                             </Link>
                         }

@@ -8,6 +8,7 @@
     --primary-background-color: #fafafa;
     --secondary-background-color: #d1dae3;
     --dashbord-primary-background: rgb(247, 247, 247);
+    --background--image: linear-gradient(to right, #f50057, #ffab00);
     --food-card-background: #F5F5F5;
     --primary-color: #ffab00;
     --secondary-color: #f50057;
@@ -70,6 +71,30 @@ img {
 
 .btn:focus {
     box-shadow: none;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #f50057 0%, #ffab00 51%, #f50057 100%)
+}
+
+.btn-grad {
+    padding: 10px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    /* box-shadow: 0 0 20px #eee; */
+    border-radius: 10px;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
 
 @-webkit-keyframes example {

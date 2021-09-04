@@ -14,6 +14,20 @@
     width: 60%;
 }
 
+.review-card {
+    padding: 40px 80px;
+}
+
 .review-card h2 {
     text-transform: uppercase;
+}
+
+.review-card button {
+    margin: 10px;
+    padding: 10px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    background-color: var(--primary-color);
+    letter-spacing: 1px;
 }

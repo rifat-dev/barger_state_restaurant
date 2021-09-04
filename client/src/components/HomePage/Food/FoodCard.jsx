@@ -21,7 +21,7 @@ const FoodCard = ({ food }) => {
                     <h3>{food.name}</h3>
                 </Link>
                 <h2>{`$${food.price}`}</h2>
-                <button onClick={orderFood} >Add To Cart</button>
+                <button onClick={orderFood} className="btn-grad" >Add To Cart</button>
             </div>
         </div>
     );

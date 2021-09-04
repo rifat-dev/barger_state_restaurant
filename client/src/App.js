@@ -17,6 +17,8 @@ import Payment from './pages/Payment/Payment';
 
 //Route
 import ProtectedRoute from './components/route/ProtectedRoute'
+import OrderList from './components/dashbord/Admin/orderList/OrderList';
+import NewFood from './components/dashbord/Admin/NewFood/NewFood';
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
 
           {/* admin routers */}
           <ProtectedRoute path='/admin/dashbord' component={AdminDashbord} isAdmin={true} />
+          <ProtectedRoute path='/admin/order-list' component={OrderList} isAdmin={true} />
+          <ProtectedRoute path='/admin/new-food' component={NewFood} isAdmin={true} />
         </Switch>
       </BrowserRouter>
     </div>

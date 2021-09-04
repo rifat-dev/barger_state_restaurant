@@ -24,6 +24,10 @@ import {
     userReviewStatusReducer
 } from './Review/review.reducers'
 
+import {
+    adminReducer
+} from './Admin/admin.reducers'
+
 const rootReducers = combineReducers({
     auth: userReducer,
     foods: foodReducers,
@@ -32,7 +36,8 @@ const rootReducers = combineReducers({
     order: orderReducer,
     myOrders: userOrdersReducers,
     myReview: userReviewReducer,
-    myReviewStatus: userReviewStatusReducer
+    myReviewStatus: userReviewStatusReducer,
+    admin: adminReducer
 })
 
 export default rootReducers

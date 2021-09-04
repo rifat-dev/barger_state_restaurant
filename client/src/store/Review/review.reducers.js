@@ -41,7 +41,7 @@ export const userReviewReducer = (state = { review: {}, loading: false, error: n
     }
 }
 
-export const userReviewStatusReducer = (state = { isCreated: false, loading: true, error: null }, action) => {
+export const userReviewStatusReducer = (state = { isCreated: false, loading: false, error: null }, action) => {
     switch (action.type) {
         case USER_CREATE_REVIEW_REQUEST:
             return {

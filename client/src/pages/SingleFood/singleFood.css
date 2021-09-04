@@ -2,7 +2,8 @@
     display: grid;
     grid-template-rows: 1fr;
     font-family: var( --font-family);
-    background-color: #01e37f;
+    /* background-color: #01e37f; */
+    background-image: linear-gradient(to right, #f50057, #ffab00);
     padding: 20px;
     height: 100vh;
     width: 100vw;

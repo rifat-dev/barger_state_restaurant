@@ -5,11 +5,16 @@ import './singleFood.css'
 import { getSingleFood, clearError } from '../../store/Food/food.action'
 import Loader from '../../components/layouts/loader/Loader'
 
+import { addToCart } from '../../store/Cart/cart.action'
+
 const SingleFood = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     const { food, relatedFoods, loading, error } = useSelector(state => state.singleFood)
 
+    const foodAdd = () => {
+        dispatch(addToCart(food._id, 1))
+    }
 
     useEffect(() => {
         dispatch(getSingleFood(id))
@@ -53,7 +58,11 @@ const SingleFood = () => {
                                     <h3>Description</h3>
                                     <p>{food["description"]}</p>
                                 </div>
-                                <button className="buy--btn">ADD TO CART</button>
+                                <button
+                                    className="btn-grad"
+                                    onClick={foodAdd}
+                                >ADD TO CART
+                                </button>
                             </div>
                         </div>
                     </section>

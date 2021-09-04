@@ -44,14 +44,14 @@ const SideBar = () => {
                     parent === "admin" &&
                     <>
                         <Link to='/admin/dashbord' className="sidebar_menu-link" >
-                            <div className="active-item sidebar_menu-item sidebar_menu-item-admin">
+                            <div className={path === "dashbord" ? "active-item sidebar_menu-item" : "sidebar_menu-item"}>
                                 <li className="bi bi-grid-1x2-fill" ></li>
                                 Dashbord
                             </div>
                         </Link>
 
                         <Link to='/admin/order-list' className="sidebar_menu-link">
-                            <div className="sidebar_menu-item sidebar_menu-item-admin">
+                            <div className={path === "order-list" ? "active-item sidebar_menu-item" : "sidebar_menu-item"}>
                                 <li className="bi bi-cart-plus-fill"></li>
                                 Order Lists
                             </div>
@@ -65,8 +65,8 @@ const SideBar = () => {
                             </div>
                         </Link>
 
-                        <Link className="sidebar_menu-link">
-                            <div className="sidebar_menu-item sidebar_menu-item-admin">
+                        <Link className="sidebar_menu-link" to='/admin/new-food'>
+                            <div className={path === "new-food" ? "active-item sidebar_menu-item" : "sidebar_menu-item"}>
                                 <li className="bi bi-plus-square-fill"></li>
                                 New Food
                             </div>

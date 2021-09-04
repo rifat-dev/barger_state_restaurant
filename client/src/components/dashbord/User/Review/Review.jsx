@@ -4,13 +4,12 @@ import './review.css'
 import { getMyReview, clearReviewError } from '../../../../store/Review/review.action'
 import SideBar from '../../SideBar/SideBar'
 import ReviewForm from './ReviewForm';
+import UpdateReview from './UpdateReview'
 
 const Review = () => {
 
     const dispatch = useDispatch()
     const { review, loading, error } = useSelector(state => state.myReview)
-
-    console.log(!review)
 
     useEffect(() => {
         dispatch(getMyReview())
@@ -26,7 +25,7 @@ const Review = () => {
                     {
                         Object.keys(review).length === 0 ?
                             <ReviewForm /> :
-                            <h1>I am Order</h1>
+                            <UpdateReview />
                     }
                 </div>
             </div>

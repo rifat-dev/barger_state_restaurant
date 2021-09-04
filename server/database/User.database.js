@@ -11,6 +11,11 @@ class User {
         return newUser[0];
     }
 
+    findAll = async() => {
+        const users = await this.collection.find().toArray()
+        return users
+    }
+
     find = async(email) => {
         const user = await this.collection.find({ email: email }).toArray()
         return user[0];

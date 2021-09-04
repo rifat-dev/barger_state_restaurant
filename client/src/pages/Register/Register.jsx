@@ -133,7 +133,7 @@ const Register = () => {
                                             <img src={avatarPreview} alt="Profile" style={{ width: "200px", height: "200px" }} />
                                         </div>
                                     }
-                                    <button type="submit" className="btn mt-2  register-col_right-btn">Register</button>
+                                    <button type="submit" className="btn-grad mt-2  register-col_right-btn">Register</button>
                                     <p className="text-center " >All Ready Have an Account?
                                         <span> <Link className="link" to='/login' > Login</Link></span>
                                     </p>

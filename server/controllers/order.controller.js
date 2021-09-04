@@ -37,3 +37,18 @@ exports.getUserOrders = async(req, res, next) => {
         next(e)
     }
 }
+
+exports.getAdminOrders = async(req, res, next) => {
+    try {
+        const Order = await db.order()
+        const orders = await Order.find();
+
+        res.status(200).json({
+            success: true,
+            orders: orders
+        })
+
+    } catch (e) {
+        next(e)
+    }
+}
