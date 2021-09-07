@@ -9,7 +9,10 @@ import {
     ADMIN_FOODS_GET_REQUEST,
     ADMIN_FOODS_GET_FAIL,
     ADMIN_USERS_GET_SUCCESS,
-    ADMIN_FOODS_GET_SUCCESS
+    ADMIN_FOODS_GET_SUCCESS,
+    ADMIN_CREATE_FOOD_FAIL,
+    ADMIN_CREATE_FOOD_RESET,
+    ADMIN_CREATE_FOOD_SUCCESS
 } from './admin.types'
 
 
@@ -67,6 +70,26 @@ export const getAdminOrders = () => async(dispatch) => {
     } catch (e) {
         dispatch({
             type: ADMIN_ORDERS_GET_FAIL,
+            payload: e.response.data.message
+        })
+    }
+}
+
+export const createAdminFood = (formData) => async(dispatch) => {
+    try {
+
+        dispatch({ type: ADMIN_CREATE_FOOD_RESET })
+
+        const { data } = await axios.post('/api/food/new-food', formData)
+
+        dispatch({
+            type: ADMIN_CREATE_FOOD_SUCCESS,
+            payload: data.success
+        })
+
+    } catch (e) {
+        dispatch({
+            type: ADMIN_CREATE_FOOD_FAIL,
             payload: e.response.data.message
         })
     }

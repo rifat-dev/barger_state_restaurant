@@ -5,6 +5,7 @@ const errorMsgFormater = require('../utils/errorMsgFormater.utils')
 exports.createNewFoodController = async(req, res, next) => {
 
     try {
+
         const Food = db.food()
         const errors = validationResult(req).formatWith(errorMsgFormater)
 
@@ -15,15 +16,15 @@ exports.createNewFoodController = async(req, res, next) => {
             })
         }
 
-        req.body.foodImage = req.file.path
+
+        req.body.foodImage = `/uploads/${req.file.filename}`
         req.body.user = req.user._id
 
 
-        const food = await Food.create(req.body)
-        console.log(food)
+        await Food.create(req.body)
+
         res.status(200).json({
             success: true,
-            food: food
         })
 
     } catch (e) {

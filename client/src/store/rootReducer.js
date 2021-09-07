@@ -25,7 +25,8 @@ import {
 } from './Review/review.reducers'
 
 import {
-    adminReducer
+    adminReducer,
+    adminDashbordStatusReducer
 } from './Admin/admin.reducers'
 
 const rootReducers = combineReducers({
@@ -37,7 +38,8 @@ const rootReducers = combineReducers({
     myOrders: userOrdersReducers,
     myReview: userReviewReducer,
     myReviewStatus: userReviewStatusReducer,
-    admin: adminReducer
+    admin: adminReducer,
+    adminStatus: adminDashbordStatusReducer
 })
 
 export default rootReducers

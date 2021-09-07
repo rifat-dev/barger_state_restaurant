@@ -4,7 +4,6 @@ const db = require('../database/mongodb')
 exports.createNewOrder = async(req, res, next) => {
 
     try {
-
         const Order = await db.order()
 
         req.body.orderStatus = 'Received'

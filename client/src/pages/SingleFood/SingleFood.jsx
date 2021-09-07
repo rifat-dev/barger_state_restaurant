@@ -32,7 +32,7 @@ const SingleFood = () => {
                                     </div>
                                     <div className="photo-album">
                                         <ul>
-                                            {relatedFoods.slice(0, 3).map(f => (
+                                            {relatedFoods.slice(0, 2).map(f => (
                                                 <Link to={`/single-food/${f._id}`} > <li><img src={f.foodImage} alt={f.name} /></li></Link>
                                             ))}
                                         </ul>
@@ -54,10 +54,10 @@ const SingleFood = () => {
                                     <h3>Part</h3>
                                     <p>{food.part}</p>
                                 </div>
-                                <div className="description">
+                                {/* <div className="description">
                                     <h3>Description</h3>
-                                    <p>{food["description"]}</p>
-                                </div>
+                                    <p>{food.description}</p>
+                                </div> */}
                                 <button
                                     className="btn-grad"
                                     onClick={foodAdd}

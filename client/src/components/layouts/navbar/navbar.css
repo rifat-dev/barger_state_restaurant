@@ -38,3 +38,70 @@
     padding: 6px 25px;
     margin: 0 4px;
 }
+
+
+/*
+  Nav section
+*/
+
+.nav-bar {
+    height: 100px;
+}
+
+.nav-container {
+    margin: 0 auto;
+    width: 950px;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.nav-box {
+    text-align: center;
+}
+
+.nav-box ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: none;
+}
+
+.nav-box ul li {
+    padding: 10px 20px;
+}
+
+.nav-box ul li .navLink {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-family: var(--font-family);
+    position: relative;
+}
+
+.navbar_cart {
+    color: var(--primary-text-color);
+}
+
+.navbar_cart:hover {
+    color: var(--primary-text-color);
+}
+
+.navLink::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    left: 0;
+    bottom: 0;
+    transition: width 1s;
+}
+
+.navLink:hover::before {
+    width: 100%;
+    right: 0;
+}

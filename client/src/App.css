@@ -13,17 +13,44 @@
     --primary-color: #ffab00;
     --secondary-color: #f50057;
     --third-color: #122936;
-    --primary-text-color: #212121;
+    --primary-text-color: #000;
     --secondary-text-color: #fafafa;
     --third-text-color: #f50057;
-    --font-family: 'Courier New', Courier, monospace;
+    --font-family: 'Open Sans', sans-serif;
 }
 
 
 /* common style */
 
-body {
+html {
     overflow-x: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: var(--primary-text-color);
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2 {
+    font-weight: 700;
 }
 
 img {

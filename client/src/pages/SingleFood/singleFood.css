@@ -140,6 +140,8 @@
 .description {
     clear: left;
     margin: 2em 0;
+    height: 150px;
+    overflow: scroll;
 }
 
 .description h3 {

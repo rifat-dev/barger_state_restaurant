@@ -12,7 +12,7 @@ const FoodCard = ({ food }) => {
     }
 
     return (
-        <div className="food-card" >
+        <div className="food-card " >
             <div className="food-card-image">
                 <img src={food.foodImage} alt="foodImage" />
             </div>
