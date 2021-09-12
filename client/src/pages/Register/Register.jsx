@@ -73,74 +73,72 @@ const Register = () => {
             {
                 loading ? <Loader />
                     :
-                    <>
-                        <div className="col-md-6 register-col">
-                            <div className="register-col_left">
-                                <img className="register-col_left-image-1" src={registerPageImage1} alt="Food " />
-                                <img className="register-col_left-image-2" src={registerPageImage2} alt="Food " />
+                    <section className="register-section" >
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-md-6 offset-md-3">
+                                    <div className="register-col_right">
+                                        <img className="register-col_right-img" src={logo} alt="Logo" />
+                                        <form onSubmit={submitForm} className="register-col_right-form" >
+                                            <div className="form-group">
+                                                <label htmlFor="name">Name</label>
+                                                <input
+                                                    type="text"
+                                                    name="name"
+                                                    className="form-control"
+                                                    id="name"
+                                                    placeholder="Enter your name"
+                                                    onChange={(e) => setName(e.target.value)}
+                                                />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="email">Email address</label>
+                                                <input
+                                                    type="email"
+                                                    className="form-control"
+                                                    id="email"
+                                                    name="email"
+                                                    placeholder="Enter your email"
+                                                    onChange={(e) => setEmail(e.target.value)}
+                                                />
+                                                <small className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="password">Password</label>
+                                                <input
+                                                    type="password"
+                                                    name="password"
+                                                    className="form-control"
+                                                    placeholder="Enter your password"
+                                                    onChange={(e) => setPassword(e.target.value)}
+                                                    id="password" />
+                                            </div>
+                                            <div className="form-group">
+                                                <label htmlFor="avatar">Profile Image</label>
+                                                <input
+                                                    type="file"
+                                                    name="avatar"
+                                                    multiple
+                                                    className="form-control"
+                                                    id="avatar"
+                                                    onChange={fileUploader}
+                                                />
+                                            </div>
+                                            {avatarPreview &&
+                                                <div>
+                                                    <img src={avatarPreview} alt="Profile" style={{ width: "200px", height: "200px" }} />
+                                                </div>
+                                            }
+                                            <button type="submit" className="btn-grad mt-2  register-col_right-btn">Register</button>
+                                            <p className="text-center " >All Ready Have an Account?
+                                                <span> <Link className="link" to='/login' > Login</Link></span>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-md-6 register-col">
-                            <div className="register-col_right">
-                                <img className="register-col_right-img" src={logo} alt="Logo" />
-                                <form onSubmit={submitForm} className="register-col_right-form" >
-                                    <div className="form-group">
-                                        <label htmlFor="name">Name</label>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            className="form-control"
-                                            id="name"
-                                            placeholder="Enter your name"
-                                            onChange={(e) => setName(e.target.value)}
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="email">Email address</label>
-                                        <input
-                                            type="email"
-                                            className="form-control"
-                                            id="email"
-                                            name="email"
-                                            placeholder="Enter your email"
-                                            onChange={(e) => setEmail(e.target.value)}
-                                        />
-                                        <small className="form-text text-muted">We'll never share your email with anyone else.</small>
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="password">Password</label>
-                                        <input
-                                            type="password"
-                                            name="password"
-                                            className="form-control"
-                                            placeholder="Enter your password"
-                                            onChange={(e) => setPassword(e.target.value)}
-                                            id="password" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="avatar">Profile Image</label>
-                                        <input
-                                            type="file"
-                                            name="avatar"
-                                            multiple
-                                            className="form-control"
-                                            id="avatar"
-                                            onChange={fileUploader}
-                                        />
-                                    </div>
-                                    {avatarPreview &&
-                                        <div>
-                                            <img src={avatarPreview} alt="Profile" style={{ width: "200px", height: "200px" }} />
-                                        </div>
-                                    }
-                                    <button type="submit" className="btn-grad mt-2  register-col_right-btn">Register</button>
-                                    <p className="text-center " >All Ready Have an Account?
-                                        <span> <Link className="link" to='/login' > Login</Link></span>
-                                    </p>
-                                </form>
-                            </div>
-                        </div>
-                    </>
+                    </section>
             }
         </div>
     );

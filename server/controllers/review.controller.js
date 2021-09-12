@@ -44,8 +44,6 @@ exports.getMyReview = async(req, res, next) => {
 
         const review = await Review.findByUser(req.user._id)
 
-        console.log(review[0])
-
         res.status(200).json({
             success: true,
             review: review[0]

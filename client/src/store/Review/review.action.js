@@ -60,7 +60,7 @@ export const getMyReview = () => async(dispatch) => {
 
         dispatch({
             type: USER_GET_REVIEW_SUCCESS,
-            payload: data.review
+            payload: data.review ? data.review : {}
         })
 
     } catch (e) {

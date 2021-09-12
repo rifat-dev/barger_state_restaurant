@@ -51,8 +51,6 @@ const ReviewForm = () => {
         }
 
         dispatch(createMyReview(newReview))
-
-        console.log(newReview)
     }
 
     return (

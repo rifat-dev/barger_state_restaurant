@@ -23,14 +23,14 @@ const Review = () => {
     ];
 
     return (
-        <section className="review-section">
+        <section className="review-section" style={{ padding: '100px 0' }}>
             <div className=" container" >
-                <div className="review-header">
+                <div className="review-header" style={{ width: '80%', margin: '0 auto', textAlign: 'center' }}>
                     <h2 className="title">Clients Feedback</h2>
                 </div>
                 {
                     reviews && <Carousel enableAutoPlay
-                        autoPlaySpeed={2000} breakPoints={breakPoints}
+                        autoPlaySpeed={2000}
                     >
                         {
                             reviews.map(review => <ReviewCard key={review._id} review={review} />)

@@ -52,47 +52,58 @@ const LogIn = () => {
         <section id="login">
             {loading ? <Loader />
                 :
-                <>
-                    <div className="row login">
-                        <div className="col-md-6 login_col">
-                            <div className="login_col-left">
-                                <img className="login_col-left-logo" src={logo} alt="Logo" />
-                                <form onSubmit={submitForm} className="login-col_left-form">
-                                    <div className="form-group">
-                                        <label htmlFor="email">Email address</label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            className="form-control"
-                                            id="email" aria-describedby="email"
-                                            placeholder="Enter your email..."
-                                            onChange={(e) => setEmail(e.target.value)}
-                                        />
-                                        <small className="form-text text-muted">We'll never share your email with anyone else.</small>
+                <section style={{ padding: '100px 0' }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-6 offset-md-3">
+                                <div class="alert alert-danger" role="alert">
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <h4>As Admin :</h4>
+                                            <p>Email : <strong>admin@gmail.com</strong></p>
+                                            <p>Password : <strong>Admin123#</strong></p>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <h4>As User :</h4>
+                                            <p>Email : <strong>user@gmail.com</strong></p>
+                                            <p>Password : <strong>User123#</strong></p>
+                                        </div>
                                     </div>
-                                    <div className="form-group">
-                                        <label htmlFor="password">Password</label>
-                                        <input type="password"
-                                            className="form-control"
-                                            id="password"
-                                            placeholder="Enter your password..."
-                                            onChange={(e) => setPassword(e.target.value)}
-                                        />
-                                    </div>
-                                    <button type="submit" className="btn-grad login-btn">Submit</button>
-                                    <p className="text-center " >Don't Have an Account?
-                                        <span> <Link className="link" to='/register' > Register</Link></span>
-                                    </p>
-                                </form>
-                            </div>
-                        </div>
-                        <div className="col-md-6 login_col">
-                            <div className="login_col-right">
-                                <img src={login_1} alt="Food" />
+                                </div>
+                                <div className="login_col-left">
+                                    <img className="login_col-left-logo" src={logo} alt="Logo" />
+                                    <form onSubmit={submitForm} className="login-col_left-form">
+                                        <div className="form-group">
+                                            <label htmlFor="email">Email address</label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                className="form-control"
+                                                id="email" aria-describedby="email"
+                                                placeholder="Enter your email..."
+                                                onChange={(e) => setEmail(e.target.value)}
+                                            />
+                                            <small className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="password">Password</label>
+                                            <input type="password"
+                                                className="form-control"
+                                                id="password"
+                                                placeholder="Enter your password..."
+                                                onChange={(e) => setPassword(e.target.value)}
+                                            />
+                                        </div>
+                                        <button type="submit" className="btn-grad login-btn">Submit</button>
+                                        <p className="text-center " >Don't Have an Account?
+                                            <span> <Link className="link" to='/register' > Register</Link></span>
+                                        </p>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </>
+                </section>
             }
         </section>
     );

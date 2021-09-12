@@ -13,17 +13,17 @@ const ReviewCard = ({ review }) => {
     console.log(review.image)
 
     return (
-        <div className='col-md-4 col-sm-12'>
-            <div className="card mt-5 mb-5 p-1 text-center" >
+        <div className='col-md-6 col-sm-12'>
+            <div className="card mt-5 mb-5 p-1 " >
                 <div className="d-flex align-items-center pt-3 pl-3">
-                    {review.img ?
-                        <img style={{ width: '50px', height: '40px', borderRadius: '50%' }} className='mr-3 card-img' src={review.image} alt="clientPic" />
+                    {review.image ?
+                        <img style={{ width: '64px', height: '64px', borderRadius: '50%' }} className='m-3 card-img' src={review.image} alt="clientPic" />
                         :
                         <h1 style={reviewStyle}>{review.name.slice(0, 1)}</h1>
                     }
 
                     <div>
-                        <h5 className='font-weight-bold'>{review.name}</h5>
+                        <h5 className='font-weight-bol pl-4'>{review.name}</h5>
                     </div>
                 </div>
                 <div className="pb-0 card_over card-body">
