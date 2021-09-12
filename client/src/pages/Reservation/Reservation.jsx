@@ -1,6 +1,13 @@
+import { useAlert } from 'react-alert'
 import './reservation.css'
 
 const Reservation = () => {
+    const alert = useAlert()
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+        alert.info('This service is currently not available')
+    }
     return (
         <section id="gtco-reservation" className="bg-white section-padding reservation-section" >
             <div className="container">
@@ -15,7 +22,7 @@ const Reservation = () => {
                                     Book Now
                                 </h2>
                             </div>
-                            <form method="post" name="contact-us" action="">
+                            <form method="post" name="contact-us" action="" onSubmit={onSubmit}>
                                 <div className="row">
                                     <div className="col-md-12 form-group">
                                         <input type="text" className="form-control" id="name" name="name" placeholder="Name" />
@@ -63,7 +70,12 @@ const Reservation = () => {
                                         <textarea className="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
                                     </div>
                                     <div className="col-md-12 text-center">
-                                        <button className="btn-grad btn-shadow btn-lg" type="submit" name="submit">Send Message</button>
+                                        <button
+                                            className="btn-grad btn-shadow btn-lg"
+                                            type="submit"
+                                            name="submit"
+
+                                        >Send Message</button>
                                     </div>
                                 </div>
                             </form>
