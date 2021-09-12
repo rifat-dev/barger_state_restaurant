@@ -31,12 +31,6 @@
     border-bottom: 2px solid var( --primary-color);
 }
 
-.food-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 .food-card {
     position: relative;
     width: 320px;

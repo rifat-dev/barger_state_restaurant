@@ -48,9 +48,11 @@ const Food = () => {
                         </div>
                         <FoodMenuBar handleCategories={handleCategories} />
                         <div className="container">
-                            <div className="food-container">
+                            <div className="row">
                                 {filterFoods.map(food => (
-                                    <FoodCard food={food} />
+                                    <div className="col-lg-4 col-md-6 col-12" >
+                                        <FoodCard food={food} />
+                                    </div>
                                 ))}
                             </div>
                         </div>

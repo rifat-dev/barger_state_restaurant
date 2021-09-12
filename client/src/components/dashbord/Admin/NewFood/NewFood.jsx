@@ -46,7 +46,7 @@ const NewFood = () => {
         }
 
         if (isCreated) {
-            alert.success('Done !')
+            alert.success('Add New Food Done !')
             dispatch({ type: ADMIN_CREATE_FOOD_RESET })
             setName("")
             setTitle("")
@@ -80,6 +80,7 @@ const NewFood = () => {
                                             id="name"
                                             placeholder="Food name"
                                             onChange={(e) => setName(e.target.value)}
+                                            value={name}
                                         />
                                     </div>
                                     <div className="form-group">
@@ -90,6 +91,7 @@ const NewFood = () => {
                                             id="title"
                                             placeholder="Food title"
                                             onChange={(e) => setTitle(e.target.value)}
+                                            value={title}
                                         />
                                     </div>
                                     <div className="form-group">
@@ -99,6 +101,7 @@ const NewFood = () => {
                                             id="category"
                                             className="form-control"
                                             onChange={(e) => setPart(e.target.value)}
+                                            value={part}
                                         >
                                             <option defaultValue="Select menu">Select a category</option>
                                             <option>Breakfast</option>
@@ -114,6 +117,7 @@ const NewFood = () => {
                                             id="exampleInput"
                                             rows="3"
                                             onChange={(e) => setDescription(e.target.value)}
+                                            value={description}
                                         ></textarea>
                                     </div>
                                     <div className="form-group">
@@ -122,6 +126,7 @@ const NewFood = () => {
                                             type="number"
                                             className="form-control"
                                             onChange={(e) => setPrice(e.target.value)}
+                                            value={price}
                                         />
                                     </div>
                                     <div className="form-group">
@@ -130,6 +135,7 @@ const NewFood = () => {
                                             type="file"
                                             className="form-control"
                                             onChange={(e) => setImage(e.target.files[0])}
+
                                         />
                                     </div>
                                     <button type="submit" className="btn-grad">Submit</button>
