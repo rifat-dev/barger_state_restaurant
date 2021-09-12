@@ -3,6 +3,12 @@
     margin: 50px auto;
 }
 
+.blog-header {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .p-text {
     margin: 20px 0;
     font-weight: 500;

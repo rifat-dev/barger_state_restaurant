@@ -40,6 +40,12 @@ const Food = () => {
             {
                 !loading ?
                     <div className="food" >
+                        <div className="food-hader">
+                            <h6 className="tag">Specialties</h6>
+                            <h2 className="title">
+                                Our Menu
+                            </h2>
+                        </div>
                         <FoodMenuBar handleCategories={handleCategories} />
                         <div className="container">
                             <div className="food-container">

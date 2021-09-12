@@ -53,6 +53,16 @@ h2 {
     font-weight: 700;
 }
 
+.tag {
+    color: var(--secondary-color);
+    font-size: 22px;
+}
+
+.title {
+    color: var(--primary-text-color);
+    font-size: 30px;
+}
+
 img {
     -webkit-filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
     filter: saturate(150%) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));

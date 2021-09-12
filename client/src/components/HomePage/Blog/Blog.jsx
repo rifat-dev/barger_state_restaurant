@@ -6,10 +6,12 @@ import './Blog.css'
 const Blog = () => {
     return (
         <div className='container blog'>
-            <h2>Why you Choose us</h2>
-            <p className='p-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
-                Necessitatibus recusandae natus minus sequi distinctio ratione nobis animi est.
-            </p>
+            <div className="blog-header">
+                <h2 className="title">Why you Choose us</h2>
+                <p className='p-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
+                    Necessitatibus recusandae natus minus sequi distinctio ratione nobis animi est.
+                </p>
+            </div>
             <div className='card_container'>
                 <Card className='custom_card' style={{ width: '21rem' }}>
                     <Card.Img variant="top" src='https://i.ibb.co/TTZrsLJ/iamge1.png' />

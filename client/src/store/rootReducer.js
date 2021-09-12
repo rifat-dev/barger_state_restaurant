@@ -21,7 +21,8 @@ import {
 
 import {
     userReviewReducer,
-    userReviewStatusReducer
+    userReviewStatusReducer,
+    reviewsReducer
 } from './Review/review.reducers'
 
 import {
@@ -35,6 +36,7 @@ const rootReducers = combineReducers({
     singleFood: singleFoodReducer,
     cart: cartReducer,
     order: orderReducer,
+    reviews: reviewsReducer,
     myOrders: userOrdersReducers,
     myReview: userReviewReducer,
     myReviewStatus: userReviewStatusReducer,

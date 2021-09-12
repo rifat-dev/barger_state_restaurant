@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css';
 
 import NavBar from './components/layouts/navbar/NavBar'
+import Footer from './components/layouts/footer/footer'
 import Home from './pages/Home/Home';
 import LogIn from './pages/LogIn/LogIn';
 import Register from './pages/Register/Register';
@@ -19,6 +20,10 @@ import Payment from './pages/Payment/Payment';
 import ProtectedRoute from './components/route/ProtectedRoute'
 import OrderList from './components/dashbord/Admin/orderList/OrderList';
 import NewFood from './components/dashbord/Admin/NewFood/NewFood';
+import About from './pages/About/About';
+import Food from './components/HomePage/Food/Food';
+import Team from './pages/Team/Team';
+import Reservation from './pages/Reservation/Reservation';
 
 
 function App() {
@@ -28,6 +33,10 @@ function App() {
         <NavBar />
         <Switch>
           <Route path='/' component={Home} exact />
+          <Route path='/about' component={About} />
+          <Route path='/menu' component={Food} />
+          <Route path='/team' component={Team} />
+          <Route path='/reservation' component={Reservation} />
           <Route path='/login' component={LogIn} exact />
           <Route path='/register' component={Register} exact />
           <Route path='/single-food/:id' component={SingleFood} exact />
@@ -43,6 +52,7 @@ function App() {
           <ProtectedRoute path='/admin/order-list' component={OrderList} isAdmin={true} />
           <ProtectedRoute path='/admin/new-food' component={NewFood} isAdmin={true} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

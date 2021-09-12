@@ -1,0 +1,15 @@
+.reservation-section {
+    background-image: url('../../assets/reservation-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left;
+    background-size: cover;
+    margin: 100px 0;
+    position: relative;
+}
+
+.section-content {
+    margin-bottom: -80px;
+    margin-top: 80px;
+    z-index: 99;
+}

@@ -1,7 +1,21 @@
 const db = require('../database/mongodb')
 
 
+exports.getAllReviews = async(req, res, next) => {
+    try {
+        const Review = await db.review()
 
+        const reviews = await Review.find()
+
+        res.status(200).json({
+            success: true,
+            reviews: reviews
+        })
+
+    } catch (error) {
+        next(error)
+    }
+}
 
 exports.createReview = async(req, res, next) => {
     try {

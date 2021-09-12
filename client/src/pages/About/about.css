@@ -1,0 +1,21 @@
+.about-section {
+    padding: 100px 0;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+}
+
+.about-text h2 {
+    text-transform: uppercase;
+}
+
+.about-text p {
+    padding: 40px 0;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,49 @@
+.team-member {
+    padding: 10px;
+    position: relative;
+}
+
+.team-section {
+    padding: 100px 0;
+}
+
+.team-header {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-section img {
+    width: 350px;
+    height: 500px;
+}
+
+.team-about {
+    position: absolute;
+    left: 50px;
+    bottom: 40px;
+    width: 300px;
+    padding: 10px;
+    height: 80px;
+    background-color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.team-social-links {
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.team-social-links a {
+    color: var(--secondary-color);
+}
+
+.team-member:hover .team-about {
+    height: 110px;
+}
+
+.team-member:hover .team-about .team-social-links {
+    opacity: 1;
+}
