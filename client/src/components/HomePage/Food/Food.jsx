@@ -9,6 +9,7 @@ import { getAllFoods } from '../../../store/Food/food.action'
 import Loader from '../../layouts/loader/Loader';
 
 const Food = () => {
+    const [index, setIndex] = useState(6)
     const [classCat, setcCassCat] = useState('All')
     const [filterFoods, setFilterFoods] = useState([])
 
@@ -34,7 +35,6 @@ const Food = () => {
         dispatch(getAllFoods())
     }, [])
 
-
     return (
         <>
             {
@@ -49,13 +49,21 @@ const Food = () => {
                         <FoodMenuBar handleCategories={handleCategories} />
                         <div className="container">
                             <div className="row">
-                                {filterFoods.map(food => (
+                                {filterFoods.slice(0, index).map(food => (
                                     <div className="col-lg-4 col-md-6 col-12" >
                                         <FoodCard food={food} />
                                     </div>
                                 ))}
                             </div>
                         </div>
+                        {index <= filterFoods.length &&
+                            <div className="food-footer mt-4" style={{ width: '80%', margin: '0 auto', textAlign: 'center' }}>
+                                <button
+                                    className="btn-grad"
+                                    onClick={() => setIndex(index + 3)}
+                                >Load more ....</button>
+                            </div>
+                        }
                     </div>
                     :
                     <>
