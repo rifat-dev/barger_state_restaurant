@@ -2,7 +2,7 @@
 
 
 <a  href="#">
-<img  width="100%"  height="100%"  src="https://github.com/tajul-islam-refath/barger_state_restaurant/blob/master/client/src/assets/fullpage.png/>
+<img  width="100%"  height="100%"  src="https://github.com/tajul-islam-refath/barger_state_restaurant/blob/master/client/src/assets/fullpage.png"/>
 </a>
 
 ## About & Features
