@@ -8,8 +8,8 @@ const UserDashbord = () => {
             <div className="user-dashbord_sidebar">
                 <SideBar />
             </div>
-            <div className="user-dashbord_body">
-                <h1>I am User Dashbord</h1>
+            <div className="user-dashbord_body text-center ">
+                <h1>Comming soon</h1>
             </div>
         </div>
     );
