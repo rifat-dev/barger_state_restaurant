@@ -11,16 +11,19 @@ const {
     userRegisterController,
     userSignInController,
     userSignOutController,
-    getAdminUsers
+    getAdminUsers,
+    userDashbordController
 } = require('../controllers/user.controller')
 
+
+const { isAuthenticate } = require("../midewares/authentication.midleware")
 
 router.post('/register', upload.single('avatar'), signUpValidator, userRegisterController)
 router.post('/signIn', signInvalidator, userSignInController)
 
 router.get('/signout', userSignOutController)
-
-//admin route
+router.get('/dashbord', isAuthenticate, userDashbordController)
+    //admin route
 router.get('/admin-users', getAdminUsers)
 
 

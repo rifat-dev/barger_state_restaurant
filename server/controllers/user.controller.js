@@ -96,6 +96,41 @@ exports.userSignOutController = async(req, res, next) => {
     }
 }
 
+
+exports.userDashbordController = async(req, res, next) => {
+
+    try {
+
+        let totalOrders = 0
+        let totalSpend = 0
+        let ordersPanding = 0
+
+        const Order = await db.order()
+        const orders = await Order.findByUser(req.user._id)
+
+        totalOrders = orders.length
+        orders.forEach((order) => totalSpend += order.total)
+        orders.forEach((order) => {
+            if (order.orderStatus != "Deleverd") {
+                ordersPanding++
+            }
+        })
+
+
+        res.status(200).json({
+            totalOrders,
+            totalSpend,
+            ordersPanding
+        })
+
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+
 exports.getAdminUsers = async(req, res, next) => {
 
     try {
